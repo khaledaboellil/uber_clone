@@ -14,6 +14,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:page_transition/page_transition.dart';
 Future<bool> remoteconfig()async{
   PackageInfo packageInfo = await PackageInfo.fromPlatform();
   String appVersion = packageInfo.version ;
@@ -59,11 +61,18 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: lighttheme,
-        home: compare==true? savedEmail==''?OnBoarding():LayoutScreen():UpdateScreen(),
+        home: AnimatedSplashScreen(
+          pageTransitionType: PageTransitionType.bottomToTop,
+          splashIconSize: 200,
+          splashTransition: SplashTransition.rotationTransition,
+          splash: Image(image: AssetImage('assets/images/driving.png')),
+          //
+          nextScreen: compare==true? savedEmail==''?OnBoarding():LayoutScreen():UpdateScreen(),)
+
       ),
     );
   }
 }
-//new commit
+
 
 

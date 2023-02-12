@@ -82,6 +82,6 @@ class LayoutCubit extends Cubit<LayoutState>{
   }
 
   enableLoacation() async{
-    AppSettings.openLocationSettings();
+    //AppSettings.openLocationSettings();
   }
 }
