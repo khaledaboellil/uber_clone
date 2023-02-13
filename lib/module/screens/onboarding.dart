@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:uber_clone/module/screens/choosetype.dart';
 import 'package:uber_clone/module/user/login/login.dart';
 import 'package:uber_clone/shared/companents/companents.dart';
 
@@ -35,7 +36,7 @@ class OnBoarding extends StatelessWidget {
             ),))),
             GestureDetector(
               onTap: (){
-                navigateTo(context, LoginScreen());
+                navigateTo(context, ChooseType());
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),

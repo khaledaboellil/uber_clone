@@ -7,11 +7,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:uber_clone/models/usermodel.dart';
-import 'package:uber_clone/module/screens/activity.dart';
-import 'package:uber_clone/module/screens/profile.dart';
+import 'package:uber_clone/module/user/activity.dart';
+import 'package:uber_clone/module/user/profile.dart';
 import 'package:uber_clone/shared/companents/constans.dart';
-import '../../module/screens/Home.dart';
-import '../../module/screens/services.dart';
+import '../../module/user/Home.dart';
+import '../../module/user/services.dart';
 import 'layoutstate.dart';
 import 'package:app_settings/app_settings.dart';
 class LayoutCubit extends Cubit<LayoutState>{

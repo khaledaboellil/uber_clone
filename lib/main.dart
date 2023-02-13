@@ -61,13 +61,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: lighttheme,
-        home: AnimatedSplashScreen(
-          pageTransitionType: PageTransitionType.bottomToTop,
-          splashIconSize: 200,
-          splashTransition: SplashTransition.rotationTransition,
-          splash: Image(image: AssetImage('assets/images/driving.png')),
-          //
-          nextScreen: compare==true? savedEmail==''?OnBoarding():LayoutScreen():UpdateScreen(),)
+        home:compare==true? savedEmail==''?OnBoarding():LayoutScreen():UpdateScreen()
 
       ),
     );
